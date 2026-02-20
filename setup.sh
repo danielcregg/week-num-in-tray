@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Print 
-echo Creating new tar file and executing...Look in your system tray in the bottom right
+# Build and run TimeTray
+echo "Building TimeTray JAR and launching... Check your system tray in the bottom right."
 
-rm -rf *.class *.jar
+rm -f *.class *.jar
 javac TimeTray.java
 jar -cmf TimeTray.mf TimeTray.jar *.class
-javaw -jar TimeTray.jar
+java -jar TimeTray.jar

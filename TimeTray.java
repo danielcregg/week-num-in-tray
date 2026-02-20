@@ -192,11 +192,11 @@ public class TimeTray extends TimerTask implements ActionListener {
      */
     public void actionPerformed(ActionEvent ev) {
         // user chose to exit TimeTray
-        if (ev.getActionCommand() == "quit") {
+        if ("quit".equals(ev.getActionCommand())) {
             System.exit(0);
         }
         // user requests information about TimeTray
-        if (ev.getActionCommand() == "settings") {
+        if ("settings".equals(ev.getActionCommand())) {
             SettingsWindow settingsWindow = new SettingsWindow(this);
             settingsWindow.setVisible(true);
         }
